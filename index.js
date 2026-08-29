@@ -260,7 +260,7 @@ async function liveRanks(prefix = "") {
   for (let i = 1; i < rows.length; i++) {
     const rank = clean(cell(rows[i], C.rosterRankCol));
     const callsign = clean(cell(rows[i], C.rosterCallsignCol));
-    if (!rank || !/^1Z-\d{2}$/i.test(callsign)) continue;
+    if (!rank || !/^8Z-\d{2}$/i.test(callsign)) continue;
 
     const key = rank.toLowerCase();
     if (!p || key.includes(p)) seen.set(key, rank);

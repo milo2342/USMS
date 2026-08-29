@@ -6,7 +6,7 @@ Complete MS department Discord + Google Sheets bot.
 
 ### Personnel Roster
 - **B** = Rank
-- **F** = Call-sign (`1Z-##`)
+- **F** = Call-sign (`#Z-##`)
 - **G** = Badge number placed into the selected rank slot
 
 ### Personnel Database
@@ -26,7 +26,7 @@ No new role is ever created by the bot. Whenever a rank/department role is neede
 
 ## Staff / roster commands
 
-- `/onboard` — select a member, rank, and badge number; claims the first open `#Z-##` roster slot for that rank, writes only the Discord ID to Personnel Database I, join date F, promotion date G, status K, and the badge number to Personnel Roster G. Matching rank role is assigned if it already exists.
+- `/onboard` — select a member, rank, and badge number; claims the first open `8Z-##` roster slot for that rank, writes only the Discord ID to Personnel Database I, join date F, promotion date G, status K, and the badge number to Personnel Roster G. Matching rank role is assigned if it already exists.
 - `/move` — move rank, free old roster slot, claim new slot, update promotion date, replace matching rank role, skip rank-locked members.
 - `/status` — update K using the MS status dropdown.
 - `/strike` — toggle the next free strike checkbox (M then N).
