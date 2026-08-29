@@ -135,7 +135,7 @@ function findRoleByMentionable(guild, roleId) { return roleId ? guild.roles.cach
 // Permission / supervisory roles are NOT ranks. They are extra existing roles
 // granted according to the member's current rank. The bot never creates them.
 const SUPPORT_RANK_ROLES = [
-  { roleName: "MS - Pre Supervisor", ranks: ["Supervisor"] },
+  { roleName: "MS - Probationary Deputy Marshal", ranks: ["Probationary Deputy Marshal"] },
   { roleName: "MS - Low Command", ranks: ["Low Command"] },
   { roleName: "MS - Pre Command", ranks: ["Pre Command", "Command in training"] },
   { roleName: "MS - Heads", ranks: ["High Command"] },
