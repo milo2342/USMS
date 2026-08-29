@@ -543,24 +543,23 @@ async function handleAdd(i) {
 
   const slot = await findOpenRosterSlot(rank);
   if (!slot) {
-    throw new Error(`No open ${rank} slot with a valid #-## call-sign exists in Personnel Roster.`);
+    throw new Error(`No open ${rank} slot with a valid 1Z-## call-sign exists in Personnel Roster.`);
   }
 
   const joinDate = today();
   const promotionDate = joinDate;
 
-  await setCells(C.databaseSheet, {
-    [`${C.dbRpNameCol}${db.row}`]: rpName,
-    [`${C.dbDiscordIdCol}${db.row}`]: member.id,
-    [`${C.dbJoinDateCol}${db.row}`]: joinDate,
-    [`${C.dbPromotionDateCol}${db.row}`]: promotionDate,
-    [`${C.dbStatusCol}${db.row}`]: "Active",
-    [`${C.dbTerminationCol}${db.row}`]: false,
-    [`${C.dbResignedCol}${db.row}`]: false,
-    [`${C.dbLoaCol}${db.row}`]: false,
-    [`${C.dbRankLockedCol}${db.row}`]: false
-  });
-
+await setCells(C.databaseSheet, {
+  [`${C.dbRpNameCol}${db.row}`]: rpName,
+  [`${C.dbDiscordIdCol}${db.row}`]: member.id,
+  [`${C.dbJoinDateCol}${db.row}`]: joinDate,
+  [`${C.dbPromotionDateCol}${db.row}`]: promotionDate,
+  [`${C.dbStatusCol}${db.row}`]: "Active",
+  [`${C.dbTerminationCol}${db.row}`]: false,
+  [`${C.dbResignedCol}${db.row}`]: false,
+  [`${C.dbLoaCol}${db.row}`]: false,
+  [`${C.dbRankLockedCol}${db.row}`]: false
+});
   // Main Personnel Roster gets only the selected badge in the open G cell.
   await setCell(C.rosterSheet, `${C.rosterBadgeCol}${slot.row}`, db.badge);
 
