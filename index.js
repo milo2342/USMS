@@ -273,6 +273,46 @@ async function liveRanks(prefix = "") {
     const key = rank.toLowerCase();
     if (!p || key.includes(p)) seen.set(key, rank);
   }
+  for (let i = 1; i < rows.length; i++) {
+    const rank = clean(cell(rows[i], C.rosterRankCol));
+    const callsign = clean(cell(rows[i], C.rosterCallsignCol));
+    if (!rank || !/^3Z-\d{2}$/i.test(callsign)) continue;
+
+    const key = rank.toLowerCase();
+    if (!p || key.includes(p)) seen.set(key, rank);
+  }
+  for (let i = 1; i < rows.length; i++) {
+    const rank = clean(cell(rows[i], C.rosterRankCol));
+    const callsign = clean(cell(rows[i], C.rosterCallsignCol));
+    if (!rank || !/^4Z-\d{2}$/i.test(callsign)) continue;
+
+    const key = rank.toLowerCase();
+    if (!p || key.includes(p)) seen.set(key, rank);
+  }
+  for (let i = 1; i < rows.length; i++) {
+    const rank = clean(cell(rows[i], C.rosterRankCol));
+    const callsign = clean(cell(rows[i], C.rosterCallsignCol));
+    if (!rank || !/^5Z-\d{2}$/i.test(callsign)) continue;
+
+    const key = rank.toLowerCase();
+    if (!p || key.includes(p)) seen.set(key, rank);
+  }
+  for (let i = 1; i < rows.length; i++) {
+    const rank = clean(cell(rows[i], C.rosterRankCol));
+    const callsign = clean(cell(rows[i], C.rosterCallsignCol));
+    if (!rank || !/^6Z-\d{2}$/i.test(callsign)) continue;
+
+    const key = rank.toLowerCase();
+    if (!p || key.includes(p)) seen.set(key, rank);
+  }
+  for (let i = 1; i < rows.length; i++) {
+    const rank = clean(cell(rows[i], C.rosterRankCol));
+    const callsign = clean(cell(rows[i], C.rosterCallsignCol));
+    if (!rank || !/^7Z-\d{2}$/i.test(callsign)) continue;
+
+    const key = rank.toLowerCase();
+    if (!p || key.includes(p)) seen.set(key, rank);
+  }
 
   const ranked = [...seen.values()];
   ranked.sort((a, b) => {
