@@ -63,7 +63,7 @@ const C = {
   rosterCallsignCol: "F",
   rosterBadgeCol: "G",
   dbBadgeCol: "B",
-  dbRpNameCol: process.env.PERSONNEL_DATABASE_RP_NAME_COL || "C",
+  dbRpNameCol: process.env.PERSONNEL_DATABASE_RP_NAME_COL || "D",
   dbJoinDateCol: "F",
   dbPromotionDateCol: "G",
   dbDiscordIdCol: "I",
