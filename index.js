@@ -415,7 +415,7 @@ async function handleAdd(i) {
 
   const slot = await findOpenRosterSlot(rank);
   if (!slot) {
-    throw new Error(`No open ${rank} slot with a valid 1Z-## call-sign exists in Personnel Roster.`);
+    throw new Error(`No open ${rank} slot with a valid #Z-## call-sign exists in Personnel Roster.`);
   }
 
   const joinDate = today();
