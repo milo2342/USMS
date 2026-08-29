@@ -225,7 +225,7 @@ async function findOpenRosterSlot(rank) {
     const badge = clean(cell(rows[i], C.rosterBadgeCol));
     if (rowRank.toLowerCase() !== clean(rank).toLowerCase()) continue;
     if (badge) continue;
-    if (!/^Z-\d{2}$/i.test(callsign)) continue;
+    if (!/^1Z-\d{2}$/i.test(callsign)) continue;
     return { row: i + 1, rank: rowRank, callsign };
   }
   return null;
@@ -260,7 +260,7 @@ async function liveRanks(prefix = "") {
   for (let i = 1; i < rows.length; i++) {
     const rank = clean(cell(rows[i], C.rosterRankCol));
     const callsign = clean(cell(rows[i], C.rosterCallsignCol));
-    if (!rank || !/^Z-\d{2}$/i.test(callsign)) continue;
+    if (!rank || !/^1Z-\d{2}$/i.test(callsign)) continue;
 
     const key = rank.toLowerCase();
     if (!p || key.includes(p)) seen.set(key, rank);
@@ -472,7 +472,7 @@ async function handleMove(i) {
   if (!state?.db) throw new Error("That member has no Personnel Database record.");
   if (state.roster && isTrue(cell(state.db.values, C.dbRankLockedCol))) throw new Error("That member is rank locked and cannot be moved.");
   const slot = await findOpenRosterSlot(newRank);
-  if (!slot) throw new Error(`No open ${newRank} slot with a valid Z-## call-sign exists.`);
+  if (!slot) throw new Error(`No open ${newRank} slot with a valid 1Z-## call-sign exists.`);
   const oldRank = state.roster?.rank || "Unknown";
   if (state.roster) await setCell(C.rosterSheet, `${C.rosterBadgeCol}${state.roster.row}`, "");
   await setCell(C.rosterSheet, `${C.rosterBadgeCol}${slot.row}`, state.badge);
