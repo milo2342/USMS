@@ -26,7 +26,7 @@ No new role is ever created by the bot. Whenever a rank/department role is neede
 
 ## Staff / roster commands
 
-- `/onboard` — select a member, rank, and badge number; claims the first open `1Z-##` roster slot for that rank, writes only the Discord ID to Personnel Database I, join date F, promotion date G, status K, and the badge number to Personnel Roster G. Matching rank role is assigned if it already exists.
+- `/onboard` — select a member, rank, and badge number; claims the first open `#Z-##` roster slot for that rank, writes only the Discord ID to Personnel Database I, join date F, promotion date G, status K, and the badge number to Personnel Roster G. Matching rank role is assigned if it already exists.
 - `/move` — move rank, free old roster slot, claim new slot, update promotion date, replace matching rank role, skip rank-locked members.
 - `/status` — update K using the MS status dropdown.
 - `/strike` — toggle the next free strike checkbox (M then N).
@@ -93,7 +93,7 @@ Required Discord permissions include View Channels, Send Messages, Embed Links, 
 
 ## Rank filtering and order
 
-Rank autocomplete and `/ranks` only use rows that have a valid `1Z-##` call-sign in the Personnel Roster call-sign column. This prevents category/helper rows such as `Rank`, `Needs Training`, `Pre Command`, and other non-roster labels from appearing. Ranks are presented in command hierarchy order with `Director` first.
+Rank autocomplete and `/ranks` only use rows that have a valid `#Z-##` call-sign in the Personnel Roster call-sign column. This prevents category/helper rows such as `Rank`, `Needs Training`, `Pre Command`, and other non-roster labels from appearing. Ranks are presented in command hierarchy order with `Director` first.
 
 
 ## Onboarding fields
