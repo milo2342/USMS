@@ -228,6 +228,61 @@ async function findOpenRosterSlot(rank) {
     if (!/^1Z-\d{2}$/i.test(callsign)) continue;
     return { row: i + 1, rank: rowRank, callsign };
   }
+  for (let i = 1; i < rows.length; i++) {
+    const rowRank = clean(cell(rows[i], C.rosterRankCol));
+    const callsign = clean(cell(rows[i], C.rosterCallsignCol));
+    const badge = clean(cell(rows[i], C.rosterBadgeCol));
+    if (rowRank.toLowerCase() !== clean(rank).toLowerCase()) continue;
+    if (badge) continue;
+    if (!/^2Z-\d{2}$/i.test(callsign)) continue;
+    return { row: i + 1, rank: rowRank, callsign };
+  }
+  for (let i = 1; i < rows.length; i++) {
+    const rowRank = clean(cell(rows[i], C.rosterRankCol));
+    const callsign = clean(cell(rows[i], C.rosterCallsignCol));
+    const badge = clean(cell(rows[i], C.rosterBadgeCol));
+    if (rowRank.toLowerCase() !== clean(rank).toLowerCase()) continue;
+    if (badge) continue;
+    if (!/^3Z-\d{2}$/i.test(callsign)) continue;
+    return { row: i + 1, rank: rowRank, callsign };
+  }
+  for (let i = 1; i < rows.length; i++) {
+    const rowRank = clean(cell(rows[i], C.rosterRankCol));
+    const callsign = clean(cell(rows[i], C.rosterCallsignCol));
+    const badge = clean(cell(rows[i], C.rosterBadgeCol));
+    if (rowRank.toLowerCase() !== clean(rank).toLowerCase()) continue;
+    if (badge) continue;
+    if (!/^4Z-\d{2}$/i.test(callsign)) continue;
+    return { row: i + 1, rank: rowRank, callsign };
+  }
+  for (let i = 1; i < rows.length; i++) {
+    const rowRank = clean(cell(rows[i], C.rosterRankCol));
+    const callsign = clean(cell(rows[i], C.rosterCallsignCol));
+    const badge = clean(cell(rows[i], C.rosterBadgeCol));
+    if (rowRank.toLowerCase() !== clean(rank).toLowerCase()) continue;
+    if (badge) continue;
+    if (!/^5Z-\d{2}$/i.test(callsign)) continue;
+    return { row: i + 1, rank: rowRank, callsign };
+  }
+  for (let i = 1; i < rows.length; i++) {
+    const rowRank = clean(cell(rows[i], C.rosterRankCol));
+    const callsign = clean(cell(rows[i], C.rosterCallsignCol));
+    const badge = clean(cell(rows[i], C.rosterBadgeCol));
+    if (rowRank.toLowerCase() !== clean(rank).toLowerCase()) continue;
+    if (badge) continue;
+    if (!/^6Z-\d{2}$/i.test(callsign)) continue;
+    return { row: i + 1, rank: rowRank, callsign };
+  }
+  for (let i = 1; i < rows.length; i++) {
+    const rowRank = clean(cell(rows[i], C.rosterRankCol));
+    const callsign = clean(cell(rows[i], C.rosterCallsignCol));
+    const badge = clean(cell(rows[i], C.rosterBadgeCol));
+    if (rowRank.toLowerCase() !== clean(rank).toLowerCase()) continue;
+    if (badge) continue;
+    if (!/^8Z-\d{2}$/i.test(callsign)) continue;
+    return { row: i + 1, rank: rowRank, callsign };
+  }
+  
   return null;
 }
 const RANK_ORDER = [
