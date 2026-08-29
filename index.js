@@ -232,30 +232,24 @@ async function findOpenRosterSlot(rank) {
 }
 const RANK_ORDER = [
   "Director",
+  "Deputy Director",
   "Assistant Director",
   "Chief Marshal",
-  "Chief of Staff",
-  "Deputy Director",
   "Deputy Chief Marshal",
-  "Assistant Deputy Marshal in-Charge",
-  "Deputy Marshal in Charge",
-  "Deputy Marshal",
-  "Deputy Marshals",
+  "Chief of Staff",
   "District Chief",
   "District Commander",
   "Division Commander",
-  "High Command",
-  "Low Command",
-  "Senior Deputy Marshals",
-  "Senior Deputy Marshal",
-  "Special Deputy Marshals",
-  "Special Deputy Marshal",
-  "Supervisory Deputy Marshal",
-  "Supervisors",
   "Watch Commander",
-  "Probationary Deputy Marshals",
+  "Deputy Marshal in Charge",
+  "Assistant Deputy Marshal in-Charge",
+  "Supervisory Deputy Marshal",
+  "Special Deputy Marshal",
+  "Senior Deputy Marshal",
+  "Deputy Marshal",
   "Probationary Deputy Marshal",
-  "Command in training"
+  "MS - Cadet",
+
 ];
 
 async function liveRanks(prefix = "") {
