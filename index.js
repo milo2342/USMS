@@ -225,7 +225,13 @@ async function findOpenRosterSlot(rank) {
     const badge = clean(cell(rows[i], C.rosterBadgeCol));
     if (rowRank.toLowerCase() !== clean(rank).toLowerCase()) continue;
     if (badge) continue;
-    if (!/^8Z-\d{2}$/i.test(callsign)) continue;
+    if (!/^1Z-\d{2}$/i.test(callsign)) continue;
+    if (!/^2Z-\d{2}$/i.test(callsign)) continue;
+    if (!/^3Z-\d{2}$/i.test(callsign)) continue;
+    if (!/^4Z-\d{2}$/i.test(callsign)) continue;
+    if (!/^5Z-\d{2}$/i.test(callsign)) continue;
+    if (!/^6Z-\d{2}$/i.test(callsign)) continue;
+    if (!/^7Z-\d{2}$/i.test(callsign)) continue;
     return { row: i + 1, rank: rowRank, callsign };
   }
   return null;
@@ -260,7 +266,13 @@ async function liveRanks(prefix = "") {
   for (let i = 1; i < rows.length; i++) {
     const rank = clean(cell(rows[i], C.rosterRankCol));
     const callsign = clean(cell(rows[i], C.rosterCallsignCol));
-    if (!rank || !/^8Z-\d{2}$/i.test(callsign)) continue;
+    if (!rank || !/^1Z-\d{2}$/i.test(callsign)) continue;
+    if (!rank || !/^2Z-\d{2}$/i.test(callsign)) continue;
+    if (!rank || !/^3Z-\d{2}$/i.test(callsign)) continue;
+    if (!rank || !/^4Z-\d{2}$/i.test(callsign)) continue;
+    if (!rank || !/^5Z-\d{2}$/i.test(callsign)) continue;
+    if (!rank || !/^6Z-\d{2}$/i.test(callsign)) continue;
+    if (!rank || !/^7Z-\d{2}$/i.test(callsign)) continue;
 
     const key = rank.toLowerCase();
     if (!p || key.includes(p)) seen.set(key, rank);
