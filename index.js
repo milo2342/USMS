@@ -326,7 +326,7 @@ async function findOpenRosterSlot(rank) {
     const badge = clean(cell(rows[i], C.rosterBadgeCol));
     if (rowRank.toLowerCase() !== clean(rank).toLowerCase()) continue;
     if (badge) continue;
-    if (!/^1Z-\d{2}$/i.test(callsign)) continue;
+    if (!/^1R-\d{2}$/i.test(callsign)) continue;
     return { row: i + 1, rank: rowRank, callsign };
   }
   for (let i = 1; i < rows.length; i++) {
@@ -335,7 +335,7 @@ async function findOpenRosterSlot(rank) {
     const badge = clean(cell(rows[i], C.rosterBadgeCol));
     if (rowRank.toLowerCase() !== clean(rank).toLowerCase()) continue;
     if (badge) continue;
-    if (!/^2Z-\d{2}$/i.test(callsign)) continue;
+    if (!/^2R-\d{2}$/i.test(callsign)) continue;
     return { row: i + 1, rank: rowRank, callsign };
   }
   for (let i = 1; i < rows.length; i++) {
@@ -344,7 +344,7 @@ async function findOpenRosterSlot(rank) {
     const badge = clean(cell(rows[i], C.rosterBadgeCol));
     if (rowRank.toLowerCase() !== clean(rank).toLowerCase()) continue;
     if (badge) continue;
-    if (!/^3Z-\d{2}$/i.test(callsign)) continue;
+    if (!/^3R-\d{2}$/i.test(callsign)) continue;
     return { row: i + 1, rank: rowRank, callsign };
   }
   for (let i = 1; i < rows.length; i++) {
@@ -353,7 +353,7 @@ async function findOpenRosterSlot(rank) {
     const badge = clean(cell(rows[i], C.rosterBadgeCol));
     if (rowRank.toLowerCase() !== clean(rank).toLowerCase()) continue;
     if (badge) continue;
-    if (!/^4Z-\d{2}$/i.test(callsign)) continue;
+    if (!/^4R-\d{2}$/i.test(callsign)) continue;
     return { row: i + 1, rank: rowRank, callsign };
   }
   for (let i = 1; i < rows.length; i++) {
@@ -362,7 +362,7 @@ async function findOpenRosterSlot(rank) {
     const badge = clean(cell(rows[i], C.rosterBadgeCol));
     if (rowRank.toLowerCase() !== clean(rank).toLowerCase()) continue;
     if (badge) continue;
-    if (!/^5Z-\d{2}$/i.test(callsign)) continue;
+    if (!/^5R-\d{2}$/i.test(callsign)) continue;
     return { row: i + 1, rank: rowRank, callsign };
   }
   for (let i = 1; i < rows.length; i++) {
@@ -371,7 +371,7 @@ async function findOpenRosterSlot(rank) {
     const badge = clean(cell(rows[i], C.rosterBadgeCol));
     if (rowRank.toLowerCase() !== clean(rank).toLowerCase()) continue;
     if (badge) continue;
-    if (!/^6Z-\d{2}$/i.test(callsign)) continue;
+    if (!/^6R-\d{2}$/i.test(callsign)) continue;
     return { row: i + 1, rank: rowRank, callsign };
   }
   for (let i = 1; i < rows.length; i++) {
@@ -380,7 +380,7 @@ async function findOpenRosterSlot(rank) {
     const badge = clean(cell(rows[i], C.rosterBadgeCol));
     if (rowRank.toLowerCase() !== clean(rank).toLowerCase()) continue;
     if (badge) continue;
-    if (!/^8Z-\d{2}$/i.test(callsign)) continue;
+    if (!/^8R-\d{2}$/i.test(callsign)) continue;
     return { row: i + 1, rank: rowRank, callsign };
   }
   
